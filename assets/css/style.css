@@ -206,29 +206,26 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
     z-index: 1;
 }
 
+.hero-main {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 .hero-text {
+    flex: 1;
     animation: fadeInUp 1s ease-out;
 }
 
 .hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     line-height: 1.2;
-    margin-bottom: 1.5rem;
-}
-
-.greeting {
-    display: block;
-    font-size: 0.6em;
-    font-weight: 400;
-    color: var(--text-secondary);
     margin-bottom: 0.5rem;
 }
 
@@ -240,8 +237,15 @@ body {
     background-clip: text;
 }
 
-.hero-subtitle {
+.hero-role {
     font-size: 1.25rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.hero-bio {
+    font-size: 1.1rem;
     color: var(--text-secondary);
     margin-bottom: 2rem;
     line-height: 1.8;
@@ -251,6 +255,7 @@ body {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 .btn {
@@ -287,6 +292,7 @@ body {
 }
 
 .hero-image {
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -295,8 +301,8 @@ body {
 
 .image-wrapper {
     position: relative;
-    width: 350px;
-    height: 350px;
+    width: 280px;
+    height: 280px;
 }
 
 .portrait-img {
@@ -429,8 +435,8 @@ section {
 
 .social-links {
     display: flex;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
     flex-wrap: wrap;
 }
 
@@ -688,9 +694,10 @@ section {
         left: 0;
     }
 
-    .hero-content {
-        grid-template-columns: 1fr;
+    .hero-main {
+        flex-direction: column;
         text-align: center;
+        gap: 2rem;
     }
 
     .hero-image {
@@ -698,11 +705,15 @@ section {
     }
 
     .image-wrapper {
-        width: 250px;
-        height: 250px;
+        width: 220px;
+        height: 220px;
     }
 
     .hero-buttons {
+        justify-content: center;
+    }
+
+    .social-links {
         justify-content: center;
     }
 
