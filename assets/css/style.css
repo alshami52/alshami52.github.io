@@ -296,7 +296,13 @@ body {
     animation: nec-shimmer 4s ease-in-out infinite;
 }
 
-.hero-role-company a {
+.hero-department {
+    font-size: 1.1rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-department a {
     background: linear-gradient(90deg, #006BA3, #1414A0, #0088CC, #006BA3);
     background-size: 300% 100%;
     -webkit-background-clip: text;
@@ -305,10 +311,12 @@ body {
     text-decoration: none;
     transition: opacity 0.3s ease;
     animation: nec-shimmer 4s ease-in-out infinite;
+    font-weight: 600;
 }
 
-.hero-role-company a:hover {
+.hero-department a:hover {
     opacity: 0.8;
+    text-decoration: underline;
 }
 
 @keyframes nec-shimmer {
