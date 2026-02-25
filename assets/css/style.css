@@ -296,6 +296,21 @@ body {
     animation: nec-shimmer 4s ease-in-out infinite;
 }
 
+.hero-role-company a {
+    background: linear-gradient(90deg, #006BA3, #1414A0, #0088CC, #006BA3);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    animation: nec-shimmer 4s ease-in-out infinite;
+}
+
+.hero-role-company a:hover {
+    opacity: 0.8;
+}
+
 @keyframes nec-shimmer {
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
